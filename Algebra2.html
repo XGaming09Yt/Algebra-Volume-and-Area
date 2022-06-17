@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="util.js"></script>
+</head>
+<body data-ex="0.1">
+<div include-html="header.html"></div>
+<h1>Algebra</h1>
+<p>
+Solving Math Problems with Variabes
+<pre>
+4(2x)+3y    X=3  Y=7
+Time to get a little more 
+complicated. Time to use 2
+variables. Like the last excercise
+find the value of 2x and 3y. Then 
+finish the rest of the equation.
+
+Note () = multiply.
+Example: 10(2) = 20
+
+</pre>
+<div include-html="codearea.html"></div>
+
+<script>
+includeHTML();
+
+function doit () {
+	let code = getUserCode ();
+	let score = 0;
+
+	clearMessages ();
+	// make sure its not blank
+	score += badIf(code === "", "Nope. Try again.");
+
+	// check the answer
+	score += goodIf(test (code) === 45, "Looks good!");
+
+	badIf (score === 0, "Nope. Try again");
+}
+</script>
+</body>

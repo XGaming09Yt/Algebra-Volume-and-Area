@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="util.js"></script>
+</head>
+<body data-ex="0.1">
+<div include-html="header.html"></div>
+<h1>Algebra</h1>
+<p>
+Solving Math Problems with Variables
+<pre>(4x3)+2x X=4
+To find the answer we are going 
+have to know what X means. If 
+X is near a number such as 2
+in our problem right now. We 
+know X equals 4. So your going
+to multiply 4x2. Find the value
+of 2x Then after you find that 
+finish the rest of the equation
+</pre>
+<div include-html="codearea.html"></div>
+
+<script>
+includeHTML();
+
+function doit () {
+	let code = getUserCode ();
+	let score = 0;
+
+	clearMessages ();
+	// make sure its not blank
+	score += badIf(code === "", "Nope. Try again.");
+
+	// check the answer
+	score += goodIf(test (code) === 20, "Looks good!");
+
+	badIf (score === 0, "Nope. Try again");
+}
+</script>
+</body>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="util.js"></script>
+</head>
+<body data-ex="1.1">
+<div include-html="header.html"></div>
+<h1>Volume for Cubes and Rectanguler Prisms</h1>
+<p>
+Volume. The product of the height, width and length for Cubes and Rectanguler Prisms.
+</p>
+<pre>
+	3 x 2 x 3 = x
+    L x W x H = x
+</pre>
+<p>
+The above introduces 3 numbers being multiplied to find the volume. Volume is similar to area to a certain extent. The 2 only differences is that Volume is used for 3D shapes while area is used for 2D shapes and volume is Length x Width x Height instead of just Length x Width.
+</p>
+<p> 
+Volume is modified a lot for 3D shapes but we'll get on to that later. For Cubes all the numbers are going to be the same. In order to find the volume for Cubes and Rectanguler Prisms we multiply the length, width and height.
+<p>
+Mutiply the three numbers in order to get the volume.
+<div include-html="codearea.html"></div>
+
+<script>
+    includeHTML();
+    
+    function doit () {
+        let code = getUserCode ();
+        let score = 0;
+    
+        clearMessages ();
+        // make sure its not blank
+        score += badIf(code === "", "Nope. Try again.");
+    
+        // check the answer
+        score += goodIf(test (code) === 18, "Looks good!");
+    
+        badIf (score === 0, "Nope. Try again");
+    }
+    </script>
+    </body>

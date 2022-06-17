@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="util.js"></script>
+</head>
+<body data-ex="1.1">
+<div include-html="header.html"></div>
+<h1>Area for Squares and Rectangles</h1>
+<p>
+Area is used for 2D shapes. It's pretty straight foward just mutiply 2 numbers in some cases.
+</p>
+<pre>
+Sqaures:
+    4 x 4
+
+Rectangles:
+    8 x 4
+    
+</pre>
+<p>
+The above introduces 2 numbers being multiplied to find the area.
+</p>
+Mutiply the two numbers to find the area. Include both answers such as 2_1
+<div include-html="codearea.html"></div>
+
+<script>
+    includeHTML();
+    
+    function doit () {
+        let code = getUserCode ();
+        let score = 0;
+    
+        clearMessages ();
+        // make sure its not blank
+        score += badIf(code === "", "Nope. Try again.");
+    
+        // check the answer
+        score += goodIf(test (code) === 16_32, "Looks good!");
+    
+        badIf (score === 0, "Nope. Try again");
+    }
+    </script>
+    </body>

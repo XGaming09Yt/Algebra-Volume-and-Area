@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="util.js"></script>
+</head>
+<body data-ex="1.1">
+<div include-html="header.html"></div>
+<h1>Area of Triangles</h1>
+<p>
+Area. The Product of 1/2 time Length times Width for Triangles.
+</p>
+<pre>
+Triangles:
+    1/2 x 8 x 4
+</pre>
+<p>
+This time you just have to mutiply your regular equation by 1/2
+</p>
+Solve the Equation.
+<div include-html="codearea.html"></div>
+
+<script>
+    includeHTML();
+    
+    function doit () {
+        let code = getUserCode ();
+        let score = 0;
+    
+        clearMessages ();
+        // make sure its not blank
+        score += badIf(code === "", "Nope. Try again.");
+    
+        // check the answer
+        score += goodIf(test (code) === 16, "Looks good!");
+    
+        badIf (score === 0, "Nope. Try again");
+    }
+    </script>
+    </body>

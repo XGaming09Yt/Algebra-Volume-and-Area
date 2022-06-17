@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="util.js"></script>
+</head>
+<body data-ex="0.1">
+<div include-html="header.html"></div>
+<h1>Algebra</h1>
+<p>
+Solving Math Problems with Variabes
+<pre>
+(4x+21x)+3y+9z X=3  Y=3  9=1
+Final Question. Used what you learned to solve this question.
+
+</pre>
+<div include-html="codearea.html"></div>
+
+<script>
+includeHTML();
+
+function doit () {
+	let code = getUserCode ();
+	let score = 0;
+
+	clearMessages ();
+	// make sure its not blank
+	score += badIf(code === "", "Nope. Try again.");
+
+	// check the answer
+	score += goodIf(test (code) === 102, "Congrats on Finishing all 3 Excercises");
+
+	badIf (score === 0, "Nope. Try again");
+}
+</script>
+</body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="util.js"></script>
+</head>
+<body data-ex="1.1">
+<div include-html="header.html"></div>
+<h1>Volume for Pyramids</h1>
+<p>
+Volume. The product of the height, width and length for Pyramids.
+</p>
+<pre>
+	1/3 x 3 x 2 x 3
+    1/3 x L x W x H or 1/3 x B x H
+</pre>
+<p>
+Pyramids are a bit more complicated. For this one we have to multiply our last answer by 1/3.
+</p>
+Multiply your answer from before by 1/3
+<div include-html="codearea.html"></div>
+
+<script>
+    includeHTML();
+    
+    function doit () {
+        let code = getUserCode ();
+        let score = 0;
+    
+        clearMessages ();
+        // make sure its not blank
+        score += badIf(code === "", "Nope. Try again.");
+    
+        // check the answer
+        score += goodIf(test (code) === 6, "Looks good!");
+    
+        badIf (score === 0, "Nope. Try again");
+    }
+    </script>
+    </body>

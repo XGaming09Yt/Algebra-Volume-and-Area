@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="util.js"></script>
+</head>
+<body data-ex="1.1">
+<div include-html="header.html"></div>
+<h1>Area of a Trapezoid</h1>
+<p>
+Area. the product of Base A + Base B divided by 2 times height for Trapezoids.
+</p>
+<pre>
+	4 + 8 / 2 x 4
+    Base A + Base B divided by 2 times height
+</pre>
+<p>
+Trapezoids are more complicated you have Base A + Base B then divide by 2 times height.
+</p>
+<p> 
+Add up the bases then divide by 2 then multiply it by the height
+<p>
+Solve the equation
+<div include-html="codearea.html"></div>
+
+<script>
+    includeHTML();
+    
+    function doit () {
+        let code = getUserCode ();
+        let score = 0;
+    
+        clearMessages ();
+        // make sure its not blank
+        score += badIf(code === "", "Nope. Try again.");
+    
+        // check the answer
+        score += goodIf(test (code) === 24, "Looks good!");
+    
+        badIf (score === 0, "Nope. Try again");
+    }
+    </script>
+    </body>

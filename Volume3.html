@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="util.js"></script>
+</head>
+<body data-ex="1.1">
+<div include-html="header.html"></div>
+<h1>Volume for Pyramids</h1>
+<p>
+Volume. The product of the height, width and length for Triangular Prisms.
+</p>
+<pre>
+1/2 x 3 x 2 x 3
+1/2 x Bh
+Note: Remember to make the <code>B</code> capital to tell Base and Height. Base is Length x Width.
+</pre>
+<p>
+This time we have to Mutiply our answer by <code>1/2</code>.
+</p>
+Multiply your answer from before by 1/2
+<div include-html="codearea.html"></div>
+
+<script>
+    includeHTML();
+    
+    function doit () {
+        let code = getUserCode ();
+        let score = 0;
+    
+        clearMessages ();
+        // make sure its not blank
+        score += badIf(code === "", "Nope. Try again.");
+    
+        // check the answer
+        score += goodIf(test (code) === 9, "Looks good!");
+    
+        badIf (score === 0, "Nope. Try again");
+    }
+    </script>
+    </body>

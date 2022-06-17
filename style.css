@@ -1,0 +1,90 @@
+body { font-size: 32px; }
+
+#results {
+		border: 1px solid #CCCCCC;
+		margin-top: 16px;
+		padding-left: 16px;
+		padding-top: 16px;
+		padding-bottom: 16px; 
+		color: green;
+		font-size: 48px; }
+
+textarea {
+	margin-top: 16px;
+	width: 90%;
+	font-size: 32px; }
+
+.nav {
+	background-color: lawngreen;
+	font-size: 0.5em;
+	width: 6em;
+}
+button {
+	min-width: 4em;
+	font-size: 1em;
+/*
+	border: 1px solid black;
+	background-color: white;
+*/
+	min-height: 2.5em;
+	cursor: pointer;
+	padding: 0 2em;
+	box-sizing: content-box;
+	color: black; }
+.good {
+	color: green;
+}
+
+.bad {
+	color: red;
+}
+
+.warn {
+	color:cornflowerblue;
+}
+
+code {
+	color: blue;
+}
+
+pre {
+	font-size: 24px;
+	border: 1px solid #CCCCCC;
+	margin-top: 16px;
+	padding-left: 16px;
+	padding-top: 16px;
+	padding-bottom: 16px; 
+	background-color: white;
+	color: blue;
+}
+
+table {
+	border-collapse: collapse;
+	font-size: 24px;
+	border: 1px solid #CCCCCC;
+	margin-top: 16px;
+	padding-left: 16px;
+	padding-top: 16px;
+	padding-bottom: 16px; 
+	background-color: white;
+	color: blue;
+}
+
+tr {
+	border: 1px solid #cccccc;
+}
+
+ul.root li {
+	border: 1px solid #CCCCCC;
+	margin-top: 16px;
+	padding-left: 16px;
+	padding-top: 16px;
+	padding-bottom: 16px; 
+}
+
+ul.sub li {
+	border:none;
+	margin-top: 0px;
+	padding-top: none;
+	padding-bottom: none;
+}
